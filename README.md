@@ -3,7 +3,7 @@
 >An intelligent meeting productivity tool that transforms raw audio into structured, actionable insights. This project uses state-of-the-art LLMs and Speech-to-Text models to generate full transcripts, summaries, and action items in a professional PDF format.
 
 ## Live Demo
-🚀 [Try it here](https://huggingface.co/spaces/dev-mzeeshan/ai-meeting-assistant)
+[Try it here](https://huggingface.co/spaces/dev-mzeeshan/ai-meeting-assistant)
 
 ## 🚀 Key Features
 - **High-Fidelity Transcription:** Converts meeting audio to text with high accuracy.
