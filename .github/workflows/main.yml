@@ -1,0 +1,41 @@
+name: Sync to Hugging Face hub
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Push to hub
+        env:
+          # Aapka secret name 'HG' yahan update kar diya hai
+          HF_TOKEN: ${{ secrets.HG }}
+        run: |
+          # 1. Clone the Space repo (to keep README/Requirements safe)
+          git clone https://dev-mzeeshan:$HF_TOKEN@huggingface.co/spaces/dev-mzeeshan/ai-meeting-assistant hf_space
+          
+          # 2. Copy only your updated code files
+          cp app.py hf_space/
+          cp analyzer.py hf_space/
+          cp transcriber.py hf_space/
+          
+          # 3. Commit and Push
+          cd hf_space
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          git add app.py analyzer.py transcriber.py
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update app logic"
+            # Direct push using token in URL
+            git push https://dev-mzeeshan:$HF_TOKEN@huggingface.co/spaces/dev-mzeeshan/ai-meeting-assistant main
+          else
+            echo "No changes to deploy"
+          fi
