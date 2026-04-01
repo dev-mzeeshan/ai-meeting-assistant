@@ -25,9 +25,6 @@ graph TD
     E -->|Summary & Action Items| F[Professional PDF]
     E -->|Full Transcript| F
     F --> G[User Download]
-    
-    style D fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 ## 🛠️ Tech Stack
