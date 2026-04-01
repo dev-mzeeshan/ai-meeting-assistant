@@ -179,8 +179,8 @@ def build_pdf_dark(data: dict, transcript: str, output_path: str):
     story.append(HRFlowable(width="100%", thickness=0.5, color=BORDER))
     story.append(Spacer(1, 6))
     story.append(Paragraph("TRANSCRIPT", h2))
-    transcript_preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
-    story.append(Paragraph(transcript_preview, muted))
+    # transcript_preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
+    story.append(Paragraph(transcript, muted))
 
     doc.build(story, onFirstPage=bg_canvas, onLaterPages=bg_canvas)
 
@@ -307,8 +307,8 @@ def build_pdf_dark(data: dict, transcript: str, output_path: str):
 #     story.append(HRFlowable(width="100%", thickness=0.5, color=BORDER))
 #     story.append(Spacer(1, 6))
 #     story.append(Paragraph("TRANSCRIPT", h2))
-#     preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
-#     story.append(Paragraph(preview, muted))
+#    # transcript_preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
+#     story.append(Paragraph(transcript, muted))
 #     doc.build(story)
 
 
@@ -434,8 +434,8 @@ def build_pdf_dark(data: dict, transcript: str, output_path: str):
 #     story.append(HRFlowable(width="100%", thickness=1, color=BORDER))
 #     story.append(Spacer(1, 6))
 #     story.append(Paragraph("TRANSCRIPT", h2))
-#     preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
-#     story.append(Paragraph(preview, muted))
+#     # transcript_preview = transcript[:1500] + (" ..." if len(transcript) > 1500 else "")
+#     story.append(Paragraph(transcript, muted))
 #     doc.build(story)
 
 
