@@ -653,7 +653,7 @@ HEADER_HTML = """
     <div class="header-title">AI Meeting Assistant</div>
     <div class="header-sub">Automatic transcription, action items &amp; structured summaries<br>from any meeting recording powered by OpenAI Whisper &amp; Groq</div>
     <div class="header-links">
-        <a class="header-link" href="https://zeeshan-portfolio-amber.vercel.app" target="_blank">◈ Portfolio</a>
+        <a class="header-link" href="https://dev-zeeshan-portfolio.vercel.app" target="_blank">◈ Portfolio</a>
         <a class="header-link" href="https://linkedin.com/in/zeeshanofficial" target="_blank">◈ LinkedIn</a>
         <a class="header-link" href="https://github.com/dev-mzeeshan" target="_blank">◈ GitHub</a>
     </div>
@@ -668,7 +668,7 @@ HEADER_HTML = """
 FOOTER_HTML = """
 <div class="app-footer">
     <p>Powered by OpenAI Whisper &nbsp;·&nbsp; Groq API (Llama 3.3 70B) &nbsp;·&nbsp; Gradio 5 &nbsp;·&nbsp;
-    Built by <a href="https://zeeshan-portfolio-amber.vercel.app" target="_blank">Muhammad Zeeshan</a> &nbsp;·&nbsp;
+    Built by <a href="https://dev-zeeshan-portfolio.vercel.app" target="_blank">Muhammad Zeeshan</a> &nbsp;·&nbsp;
     <a href="https://github.com/dev-mzeeshan/ai-meeting-assistant" target="_blank">View Source</a></p>
 </div>
 """
