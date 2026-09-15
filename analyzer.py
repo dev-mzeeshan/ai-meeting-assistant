@@ -61,7 +61,7 @@ Return only the JSON:"""
 
     try:
         response = get_client().chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-20b",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user",   "content": user_prompt},
